@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #1B133B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-glow {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    background-color: #3E7CB1;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 999px;
+    cursor: pointer;
+    animation: pulse-glow 2s ease-in-out infinite;
+    transition: transform 0.2s ease;
+}
+
+.button-glow:hover {
+    transform: scale(1.05);
+}
+
+.button-glow:focus-visible {
+    outline: solid 3px #FFC83D;
+    outline-offset: 4px;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 10px #81A4CD, 0 0 20px rgba(129, 164, 205, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 30px #81A4CD, 0 0 60px rgba(129, 164, 205, 0.8);
+    }
+}
